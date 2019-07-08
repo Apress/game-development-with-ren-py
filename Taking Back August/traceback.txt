@@ -1,0 +1,80 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While loading <'FactorScale' <'Image' u'image/snow.png'> 1.1 1.1 True>:
+  File "game/script.rpy", line 123, in script
+    with slideleft
+IOError: Couldn't find file 'image/snow.png'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 123, in script
+    with slideleft
+  File "/Applications/renpy-7.1.3-sdk/renpy/ast.py", line 1371, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "/Applications/renpy-7.1.3-sdk/renpy/exports.py", line 1578, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/core.py", line 2240, in do_with
+    clear=clear)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/core.py", line 2690, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/core.py", line 3174, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/core.py", line 2086, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 516, in renpy.display.render.render_screen
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/transition.py", line 850, in render
+    top = render(self.top, width, height, st, at)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/image.py", line 500, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/image.py", line 306, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/particle.py", line 417, in render
+    return renpy.display.render.render(self.sm, w, h, st, at)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/particle.py", line 280, in render
+    cache.render = r = render(cache.child_copy, width, height, cst, cst)
+  File "render.pyx", line 151, in renpy.display.render.render
+  File "render.pyx", line 244, in renpy.display.render.render
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/im.py", line 580, in render
+    return cache.get(self, render=True)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/im.py", line 266, in get
+    surf = image.load()
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/im.py", line 860, in load
+    surf = cache.get(self.image)
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/im.py", line 266, in get
+    surf = image.load()
+  File "/Applications/renpy-7.1.3-sdk/renpy/display/im.py", line 625, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/Applications/renpy-7.1.3-sdk/renpy/loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'image/snow.png'.
+
+Darwin-16.7.0-x86_64-i386-64bit
+Ren'Py 7.2.1.457
+Taking Back August 1.0
+Wed Mar 27 10:31:48 2019
